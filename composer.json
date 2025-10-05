@@ -1,0 +1,35 @@
+{
+    "name": "leafphp/framework",
+    "description": "LeafPHP: A lightweight, modular PHP framework",
+    "require": {
+        "php": ">=8.0",
+        "nikic/fast-route": "^1.3",
+        "monolog/monolog": "^3.0",
+        "psr/container": "^2.0",
+        "psr/log": "^3.0",
+        "psr/http-server-middleware": "^1.0",
+        "psr/simple-cache": "^3.0",
+        "catfan/medoo": "^2.1",
+        "vlucas/valitron": "^1.4",
+        "symfony/yaml": "^6.0",
+        "symfony/var-dumper": "^6.0",
+        "guzzlehttp/psr7": "^2.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^10.0",
+        "twig/twig": "^3.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Leaf\\": "src/Leaf/",
+            "App\\":  "app/"
+        },
+        "files": ["src/Leaf/helpers.php"]
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "bin": ["bin/leaf"]
+}
