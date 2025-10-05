@@ -55,8 +55,7 @@ error_log('DB default: ' . var_export($default, true));
 $connConfig = \Leaf\Config::get('database.connections.mysql', []);  // 用空数组默认
 error_log('MySQL conn config: ' . (is_array($connConfig) ? print_r($connConfig, true) : 'NULL or ' . gettype($connConfig)));
 
-// 检查所有配置键（如果你的 Config 支持 'all' 或类似；否则跳过，或自定义方法）
-// 如果不支持，临时在 Config.php 添加 public static function getAll() { return self::$config; }
+
 error_log('=== END CONFIG ===');
 /* ---------- 加载路由 ---------- */
 $app->loadRoutesFromControllers(__DIR__ . '/../app/Controllers/');
